@@ -23,8 +23,10 @@ public class JavaScriptEmbedded {
           String[] destinations = {"Yuma", "Tucson", "Flagstaff"};
           bindings.putMember("city", destinations);
 
+          System.out.println("------------ Running JavaScript Context");
           jsContext.eval("js", script);
 
+          System.out.println("------------ Retrieving results");
           TypeLiteral<List<Integer>> list = new TypeLiteral<List<Integer>>() {};
           List<Integer> jsVariable = jsContext.getBindings("js").getMember("miles").as(list);
           for (int mile: jsVariable) {
