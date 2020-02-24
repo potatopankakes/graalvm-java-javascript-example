@@ -1,7 +1,5 @@
 package net.klymur.examples.java.javascriptembed;
 
-import org.graalvm.polyglot.HostAccess;
-
 import java.util.Random;
 
 public class Car {
@@ -12,7 +10,6 @@ public class Car {
         this.name = name;
     }
 
-    @HostAccess.Export
     public int drive(String destination) {
         int nMiles = rand.nextInt(100);
         System.out.println(name + " drives to " + destination);
