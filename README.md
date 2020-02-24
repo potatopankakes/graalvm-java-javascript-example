@@ -18,3 +18,7 @@ asdf install
 
 ## Java calling JavaScript
 
+```
+javac -d ./target/classes/ src/main/java/net/klymur/examples/java/javascriptembed/*.java
+java -cp target/classes net.klymur.examples.java.javascriptembed.JavaScriptEmbedded
+```
